@@ -1,6 +1,9 @@
 ---
-templateKey: index-page
-title: Rebecca Falvey
-image: /img/home-jumbotron.jpg
+title: Index
+date: 2020-10-28T20:57:22.000Z
+featuredImage: /img/home-jumbotron.jpg
+description: The landing page of the site. Update this show off your latest work.
 ---
-This is the content of the landing page.
+# Featured Work Name: Example Post
+
+[Check Out Example Post](/example-post/)

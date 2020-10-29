@@ -1,3 +1,8 @@
 import React from 'react';
 
-export default () => <footer>Footer</footer>;
+const Footer = () => (
+  <footer>
+    <p>© Rebecca Falvey</p>
+  </footer>
+);
+export default Footer;

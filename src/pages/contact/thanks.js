@@ -1,11 +1,13 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 
-export default () => (
+const Thanks = () => (
   <Layout>
     <section>
       <h1>Thank you!</h1>
-      <p>This is a custom thank you page for form submissions</p>
+      <p>Your message has been successfully sent.</p>
     </section>
   </Layout>
 );
+
+export default Thanks;
