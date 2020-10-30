@@ -6,8 +6,6 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
-    // static/img config should be first gatsby-source-filesystem
-    // plugin for gatsby image support
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -44,9 +42,6 @@ module.exports = {
           {
             resolve: 'gatsby-remark-images',
             options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
               maxWidth: 1024,
             },
           },
@@ -66,15 +61,6 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
-    // gatsby-plugin-purgecss must be after other CSS plugins
-    {
-      resolve: 'gatsby-plugin-purgecss',
-      options: {
-        develop: true,
-        purgeOnly: ['/all.scss'],
-      },
-    },
-    // gatsby-plugin-netlify must be last in the array
     'gatsby-plugin-netlify',
   ],
 };

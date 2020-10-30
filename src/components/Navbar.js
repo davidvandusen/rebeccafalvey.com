@@ -7,11 +7,11 @@ import useCategories from './useCategories';
 const Navbar = () => {
   const categories = useCategories();
   return (
-    <nav>
-      <div>
+    <nav className="navigation" role="navigation">
+      <div className="branding">
         <Link to="/">Rebecca Falvey</Link>
       </div>
-      <ul>
+      <ul className="navigation-links">
         {Array.from(categories)
           .sort()
           .map((category) => (
@@ -21,6 +21,11 @@ const Navbar = () => {
           ))}
         <li>
           <Link to="/contact/">Contact</Link>
+        </li>
+        <li>
+          <Link to="/">
+            <img src="/img/instagram-logo.svg" alt="Instagram Logo" height="36" width="29" />
+          </Link>
         </li>
       </ul>
     </nav>

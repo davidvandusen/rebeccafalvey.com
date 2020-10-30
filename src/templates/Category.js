@@ -13,8 +13,12 @@ const Category = (props) => {
   return (
     <Layout>
       <section>
-        <Helmet title={`${category} - ${title}`} />
-        <h1>{category}</h1>
+        <Helmet>
+          <title>
+            {category} - {title}
+          </title>
+          <meta name="description" content={`All pages in the ${category} category.`} />
+        </Helmet>
         {pages.map(({ node: page }) => (
           <PageTemplate
             key={page.fields.slug}
@@ -53,7 +57,7 @@ export const categoryQuery = graphql`
             title
             featuredImage {
               childImageSharp {
-                fluid(maxWidth: 120, quality: 100) {
+                fluid(maxWidth: 1560, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }

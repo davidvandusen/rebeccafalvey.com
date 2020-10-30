@@ -1,9 +1,9 @@
 ---
 title: Index
 date: 2020-10-28T20:57:22.000Z
-featuredImage: /img/home-jumbotron.jpg
-description: The landing page of the site. Update this show off your latest work.
+featuredImage: /img/Gianna-Lauren-Closed-Chapter.png
+description: This is the personal website of writer and filmmaker Rebecca Falvey.
 ---
-# Featured Work Name: Example Post
+Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.
 
-[Check Out Example Post](/example-post/)
+[Go Do Something](/contact/)

@@ -18,9 +18,9 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Featured Image", name: "featuredImage", widget: "image" }
+      - { label: "Title for tab and URL", name: "title", widget: "string" }
+      - { label: "Publish date for sorting", name: "date", widget: "datetime" }
+      - { label: "Search engine description", name: "description", widget: "text" }
+      - { label: "Featured image", name: "featuredImage", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Categories", name: "categories", widget: "list" }
