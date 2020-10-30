@@ -1,34 +1,27 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Img from 'gatsby-image'
+import Img from 'gatsby-image';
+import PropTypes from 'prop-types';
+import React from 'react';
 
-const PreviewCompatibleImage = ({ imageInfo }) => {
-  const imageStyle = { borderRadius: '5px' }
-  const { alt = '', childImageSharp, image } = imageInfo
-
-  if (!!image && !!image.childImageSharp) {
-    return (
-      <Img style={imageStyle} fluid={image.childImageSharp.fluid} alt={alt} />
-    )
+const PreviewCompatibleImage = ({ imageInfo, ...props }) => {
+  const { alt = '', childImageSharp, image } = imageInfo;
+  if (image && image.childImageSharp) {
+    return <Img alt={alt} fluid={image.childImageSharp.fluid} {...props} />;
   }
-
-  if (!!childImageSharp) {
-    return <Img style={imageStyle} fluid={childImageSharp.fluid} alt={alt} />
+  if (childImageSharp) {
+    return <Img alt={alt} fluid={childImageSharp.fluid} {...props} />;
   }
-
-  if (!!image && typeof image === 'string')
-    return <img style={imageStyle} src={image} alt={alt} />
-
-  return null
-}
+  if (typeof image === 'string' && image.length > 0) {
+    return <img alt={alt} src={image} {...props} />;
+  }
+  return null;
+};
 
 PreviewCompatibleImage.propTypes = {
   imageInfo: PropTypes.shape({
     alt: PropTypes.string,
     childImageSharp: PropTypes.object,
     image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
-    style: PropTypes.object,
   }).isRequired,
-}
+};
 
-export default PreviewCompatibleImage
+export default PreviewCompatibleImage;
