@@ -2,10 +2,12 @@ import { Link } from 'gatsby';
 import React from 'react';
 
 const Footer = () => (
-  <footer className="footer">
-    <p>
-      © Rebecca Falvey • <Link to="/contact/">Contact</Link> • <a href="/">Instagram</a>
-    </p>
-  </footer>
+  <div className="wrapper">
+    <footer className="footer">
+      <p>
+        © Rebecca Falvey • <Link to="/contact/">Contact</Link> • <a href="/">Instagram</a>
+      </p>
+    </footer>
+  </div>
 );
 export default Footer;

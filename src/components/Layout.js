@@ -9,7 +9,7 @@ import useSiteMetadata from './useSiteMetadata';
 const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata();
   return (
-    <div className="wrapper">
+    <>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -27,9 +27,9 @@ const Layout = ({ children }) => {
         <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>{' '}
       <Navbar />
-      <main className="main-content">{children}</main>
+      <main>{children}</main>
       <Footer />
-    </div>
+    </>
   );
 };
 

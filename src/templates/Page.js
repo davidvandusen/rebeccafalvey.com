@@ -10,21 +10,23 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 export const PageTemplate = ({ content, contentComponent, featuredImage, title }) => {
   const PageContent = contentComponent || Content;
   return (
-    <article className="page">
-      {featuredImage ? (
-        <div className="feature-image">
-          <PreviewCompatibleImage
-            imageInfo={{
-              image: featuredImage,
-              alt: `Featured image thumbnail for "${title}"`,
-            }}
-          />
+    <div className="wrapper">
+      <article className="page">
+        {featuredImage ? (
+          <div className="feature-image">
+            <PreviewCompatibleImage
+              imageInfo={{
+                image: featuredImage,
+                alt: `Featured image thumbnail for "${title}"`,
+              }}
+            />
+          </div>
+        ) : null}
+        <div className="page-content">
+          <PageContent content={content} />
         </div>
-      ) : null}
-      <div className="page-content">
-        <PageContent content={content} />
-      </div>
-    </article>
+      </article>
+    </div>
   );
 };
 

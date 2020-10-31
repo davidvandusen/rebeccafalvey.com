@@ -12,13 +12,13 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: "page"
+    label: "Page"
     folder: "src/pages/"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Title for tab and URL", name: "title", widget: "string" }
+      - { label: "Page name for tab and URL", name: "title", widget: "string" }
       - { label: "Publish date for sorting", name: "date", widget: "datetime" }
       - { label: "Search engine description", name: "description", widget: "text" }
       - { label: "Featured image", name: "featuredImage", widget: "image" }
